@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kpfunusa"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!--
+    android:targetSdkVersion="17"
+     android:targetSdkVersion="17"   
+     	android:configChanges="orientation|screenSize"
+    -->
+    <permission android:name="com.kpfunusa.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.kpfunusa.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+   
+
+    <uses-permission android:name="com.kpfunusa.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.kpfunusa.activity.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+	    android:value="AIzaSyBlCj4gdzv922EJ0AE9mPPwJ2uBtCYesLI"/>
+	    <meta-data
+	            android:name="com.google.android.gms.version"
+	            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name="com.kpfunusa.SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityLogin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityBonus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityPersonalRewardsGfits"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityRestaurantDetails"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityRestaurantSearch"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.TabManager"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.SearchGroupsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.TabGroupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityRegister"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityRestaurantRewards"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityMore"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivitySocialConnect"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityAddFriends"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivitySharing"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityYourGift"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.kpfunusa.FriendGroupActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+		        <category android:name="android.intent.category.LAUNCHER" />
+		    </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kpfunusa.ActivityAddFriendsForSearchRestaurants"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- GCM -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.kpfunusa" />
+            </intent-filter>
+        </receiver>
+		
+        <!--  Not sure com.kpfun.gcm should be here  -->
+        <service android:name=".GCMIntentService" />
+        <!-- end of GCM -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <activity android:name="com.facebook.LoginActivity"></activity>
+        <activity android:name="com.kpfunusa.ActivityAdView"
+             	  android:screenOrientation="portrait"></activity>
+        <activity android:screenOrientation="portrait" android:name="com.kpfunusa.RestaurantMap"></activity>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <!-- Layout title -->
+
+    <TextView
+        android:id="@+id/tv_restaurantRewardsTitle"
+        style="@style/SetTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="@string/restaurant_rewards" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="#222222" />
+
+    <!-- Layout Logo Image Logo, Restaurant name, Restaurant Address -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical" >
+
+           
+			<ImageView
+                android:id="@+id/img_restaurantRewardLogo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/loader" />
+
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:background="@color/black_gray" 
+			    android:gravity="center">
+
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="2"
+				    android:gravity="center"
+				    android:orientation="vertical" >
+
+				    <ImageView
+				        android:id="@+id/iv_map_reward_layout"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:src="@drawable/map_icon_select" />
+				</LinearLayout>
+
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_marginLeft="7dp"
+				    android:layout_marginTop="0dp"
+				    android:layout_weight="1"
+				    android:orientation="vertical" >
+
+				    <TextView
+				        android:id="@+id/tv_restaurantRewardAdress"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="3dp"
+				        android:text="123 Restaurant Row"
+				        android:textColor="#41ad48"
+				        android:textIsSelectable="true"
+				        android:textSize="18dp" />
+				</LinearLayout>
+
+			</LinearLayout>
+
+            <!-- Layout off entire bill -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_restaurantRewardName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="Pizza Yolo"
+                    android:textColor="#FFFFFF"
+                    android:textIsSelectable="true"
+                    android:textStyle="bold"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/tv_reward_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="Reward description"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_restaurantRewardMemberId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Valid for Claire Smith (888888)"
+                    android:textSize="20dp" />
+				<TextView
+                    android:id="@+id/tv_restaurantTrackingId_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tracking ID"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+                <TextView
+                    android:id="@+id/tv_restaurantTrackingId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tracking ID"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+			<TextView
+                    android:id="@+id/tv_Howtoredeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to redeem"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+		    <TextView
+		        android:id="@+id/term_description"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/reward_directions"
+		        android:textColor="#EFEFEF"
+		        android:textSize="20dp" />
+		   <TextView
+		        android:id="@+id/terms_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Terms"
+		        android:textColor="@color/white"
+		        android:textStyle="bold"
+		        android:textSize="25dp" />
+		    <TextView
+		        android:id="@+id/terms_descrip"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Terms are displayed here"
+		        android:textColor="@color/white"
+		        android:textSize="20dp" />
+		<!-- 
+			TextView
+		        android:id="@+id/terms"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="10dp"
+		        android:paddingRight="10dp"
+		        android:text="View Terms"
+		        android:textColor="#41ad48"
+		        android:textSize="14sp" /
+		 -->  
+		    
+
+		</LinearLayout>
+    </ScrollView>
+</LinearLayout>

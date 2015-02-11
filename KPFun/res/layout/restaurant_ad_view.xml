@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/SetTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="@string/restaurant_rewards" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black" >
+	  <ImageView
+		        android:id="@+id/iv_BackgroundImg"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        android:background="@drawable/loader" />
+      <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:background="#222222"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical" >
+		
+
+		 <TextView
+		     android:id="@+id/tvCompanyNameDetail"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_margin="5dip"
+		     android:gravity="center|left"
+		     android:text="Pizza"
+		     android:textStyle="bold"
+		     android:textColor="#ffffff"
+		     android:textIsSelectable="true"
+		     android:textSize="30dip" />
+		 
+        <TextView
+            android:id="@+id/reward_descrip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:gravity="center|left"
+            android:text="10% Loyalty Reward"
+            android:textColor="#FFFFFF"
+            android:textSize="20dip" />
+      <!--
+        TextView
+            android:id="@+id/terms2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:text="View Terms"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#41ad48" /
+       
+       -->  
+      
+    </LinearLayout>
+	</ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dip"
+        android:background="@color/black_gray" >
+
+        <LinearLayout
+            android:layout_width="10dip"
+            android:layout_height="match_parent" >
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnButtonText"
+            style="@style/SetButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_weight="0.05"
+            android:text="@string/get_ad_view" />
+
+        <LinearLayout
+            android:layout_width="10dip"
+            android:layout_height="match_parent" >
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

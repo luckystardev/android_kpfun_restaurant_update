@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/SetTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="@string/restaurant_rewards" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:background="#222222"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical" >
+        
+		<RelativeLayout 
+		    android:id="@+id/relativelayout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" 
+		    android:background="@color/black">
+		    <ImageView
+                android:id="@+id/ivLogoDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/loader"/>
+		    <ImageView
+		        android:id="@+id/black_gradient"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/ivLogoDetail"
+		        android:layout_alignLeft="@+id/ivLogoDetail"
+		        android:layout_alignRight="@+id/ivLogoDetail"
+		        android:layout_alignTop="@+id/myImageView"
+		        android:layout_alignParentBottom="true"
+		        android:background="@drawable/black_gradient" />
+
+		    <TextView
+		        android:id="@+id/gift_rewards_details"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingBottom="10dp"
+		        android:layout_alignBottom="@+id/ivLogoDetail"
+		        android:layout_alignLeft="@+id/ivLogoDetail"
+		        android:layout_alignRight="@+id/ivLogoDetail"
+		        android:layout_margin="1dp"
+		        android:layout_weight="0.7"
+		        android:gravity="center|left"
+		        android:text="Receive 0% off your entire bill"
+		        android:textColor="#FFFFFF"
+		        android:textSize="25dp"
+		        android:textStyle="bold" />
+		</RelativeLayout>
+		<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:paddingBottom="5dp">
+
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="0.7"
+		            android:orientation="vertical" >
+		        </LinearLayout>
+
+		        <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="0.2"
+		            android:gravity="center"
+		            android:orientation="vertical" >
+
+		            <TextView
+		                android:id="@+id/distance2"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:paddingLeft="10dp"
+		                android:text="Distance"
+		                android:textAppearance="?android:attr/textAppearanceSmall"
+		                android:textColor="#ec7b00"
+		                android:textSize="20dip"
+		                android:textStyle="bold" />
+		        </LinearLayout>
+		    </LinearLayout>
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="horizontal" 
+		    android:background = "#3d3d3d">
+
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:orientation="vertical" >
+
+				<ImageView
+				    android:id="@+id/iv_map_reward"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/map_icon_select" />
+
+			</LinearLayout>
+
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical"
+			    android:layout_weight="1" >
+
+				<TextView
+				    android:id="@+id/tvAddressDetail"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_margin="5dip"
+				    android:gravity="center|left"
+				    android:text="123 Restaurant Row"
+				    android:textColor="#41ad48"
+				    android:textIsSelectable="true"
+				    android:textSize="20dip" />
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		 <TextView
+		     android:id="@+id/tvNameDetail"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_margin="5dip"
+		     android:gravity="center|left"
+		     android:text="Pizza"
+		     android:textStyle="bold"
+		     android:textColor="#ffffff"
+		     android:textIsSelectable="true"
+		     android:textSize="30dip" />
+		 
+        <TextView
+            android:id="@+id/reward2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:gravity="center|left"
+            android:text="10% Loyalty Reward"
+            android:textColor="#FFFFFF"
+            android:textSize="20dip" />
+        <TextView
+            android:id="@+id/terms_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:gravity="center|left"
+            android:text="Terms"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/terms_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:gravity="center|left"
+            android:text="Terms description"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"/>
+      <!--
+        TextView
+            android:id="@+id/terms2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:text="View Terms"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#41ad48" /
+       
+       -->  
+      
+    </LinearLayout>
+	</ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dip"
+        android:background="@color/black_gray" >
+
+        <LinearLayout
+            android:layout_width="10dip"
+            android:layout_height="match_parent" >
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGetReward"
+            style="@style/SetButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_weight="0.05"
+            android:text="@string/get_rewarded" />
+
+        <LinearLayout
+            android:layout_width="10dip"
+            android:layout_height="match_parent" >
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

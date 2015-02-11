@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/keeper_background"
+    android:gravity="center|top"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_moreTitle"
+        style="@style/SetTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/more" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_purchase_membership"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:text="@string/purchase_membership" />
+
+            <Button
+                android:id="@+id/btn_visit_website"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/visit_website" />
+
+            <!-- Button
+                android:id="@+id/btn_fb_login"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/fb_connect" /-->
+            
+            <Button
+                android:id="@+id/btn_about_us"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/about_us" />
+
+            <Button
+                android:id="@+id/btn_terms_of_use"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/terms_of_use" />
+
+            <Button
+                android:id="@+id/btn_privacy_policy"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/privacy_policy" />
+            
+            <Button
+                android:id="@+id/btn_logout"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/logout" />
+            <!--
+                 <Button
+                android:id="@+id/btn_exit_keeper"
+                style="@style/SetButtonLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/exit_keeper" />
+            -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

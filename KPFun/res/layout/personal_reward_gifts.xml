@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabManager" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >   
+        <TextView
+            android:id="@+id/tv_persionalRewardGiftTitle"
+            style="@style/SetTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="@string/personal_rewards" />
+    </RelativeLayout>
+
+    <!-- style="@style/ActivityBarStyle" -->
+
+    <LinearLayout
+        android:id="@+id/ActivityBar"
+        style="@style/ActivityBarStyle"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_gifts"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#15bcdd"
+            android:gravity="center"
+            android:text="@string/gifts"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- style="@style/ActivityButtonStyle" -->
+
+        <Button
+            android:id="@+id/btn_rewards"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="@string/rewards"
+            android:textColor="#15bcdd"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <!-- Layout Gfits -->
+
+            <LinearLayout
+                android:id="@+id/layout_gfits"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible" >
+
+                <ListView
+                    android:id="@+id/lv_gfits"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ListView>
+            </LinearLayout>
+
+            <!-- Layout rewards -->
+
+            <LinearLayout
+                android:id="@+id/layout_rewards"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="invisible" >
+
+                <ListView
+                    android:id="@+id/lv_rewards"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ListView>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- Layout drop down -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_dropLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/arraw_down"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_dropRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/arraw_down"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

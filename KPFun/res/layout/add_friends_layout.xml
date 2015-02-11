@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabManager" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_addFrientTitle"
+            style="@style/SetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/add_friends" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ActivityBar"
+        style="@style/ActivityBarStyle"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn_addFriends"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#15bcdd"
+            android:gravity="center"
+            android:src="@drawable/ic_action_user_add_while"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- style="@style/ActivityButtonStyle" -->
+
+        <ImageButton
+            android:id="@+id/btn_searchFriends"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:src="@drawable/ic_action_search_gray"
+            android:textColor="#15bcdd"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <!-- Layout add friends -->
+
+            <LinearLayout
+                android:id="@+id/layout_addFriends"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="visible" >
+		
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#189cc2" >
+                
+	                <TextView
+	                android:id="@+id/instructions"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_centerHorizontal="true"
+	                android:background="#000000"
+	                android:paddingTop="5dp"
+	                android:paddingBottom="5dp"
+	                android:text=" KpFun App users in my Contacts"
+	                android:textColor="#FFFFFF"
+	                android:textStyle="bold" />
+	            </LinearLayout>
+                
+                <ListView
+                    android:id="@+id/lv_addFriends"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ListView>
+            </LinearLayout>
+
+            <!-- Layout search friends -->
+
+            <LinearLayout
+                android:id="@+id/layout_searchFriends"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="invisible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#189cc2" >
+
+                    <com.kpfunusa.views.BSSEditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/oval"
+                        android:hint="Text Here"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_searchFriends"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ListView>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- Layout drop down -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_dropAddFriendsLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/arraw_down"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_dropAddFriendsRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/arraw_down"
+                android:visibility="invisible" />
+
+            
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
